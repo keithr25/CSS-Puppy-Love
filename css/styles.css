@@ -1,0 +1,308 @@
+/*****************************************
+			Inherited Styles
+*****************************************/
+html {
+    box-sizing: border-box;
+    color: #444;
+    font: 12pt 'Open Sans', Arial;
+    font-weight: 400;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/*******************************************
+				Defaults
+*******************************************/
+h4 {
+    margin: 0;
+}
+
+/******************************************
+				Helpers
+*******************************************/
+
+/*******************************************
+                Layouts
+*******************************************/
+
+/**
+ * Hero
+ */
+
+.hero {
+    background: radial-gradient(rgba(3, 142, 168, 0.5),
+     rgba(3, 142, 168, 1)), url('../images/bg.jpg') 
+    no-repeat center;  
+}
+
+.hero > div {
+    position: relative;    
+    width: 960px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.hero header {
+    min-height: 100px;
+    position: relative;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 3.5em;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #FFF;
+    text-decoration: none;
+} 
+
+.search-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hero nav {
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+}
+
+.hero nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: #FFF;
+}
+
+.search-form input {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-right: 5px;
+}
+
+.search-form button {
+    background-color: #EA501A;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.slogan {    
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #FFF;
+}
+
+.slogan span {
+    font-size: 2.5em;
+}
+
+
+/**
+ * Primary Content
+ */
+
+.primary-content {
+    background-color: #D7E1E7;
+    padding-bottom: 10px;
+}
+
+.primary-content > div {
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+.primary-area {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px #8E8E8E;
+}
+
+.primary-content aside {
+    width: 400px;
+    padding: 10px;
+}
+
+.primary-content aside > * + * {
+    margin-top: 5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+
+/**********************************************
+                    Components
+**********************************************/
+/*
+ * services
+ */
+.services {
+    text-align: center;
+    transform: translateY(-15%);
+}
+
+.service a {
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: .9em;
+    margin-bottom: 10px;
+}
+.service {
+    background-color: #fff;
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+    padding: 0 10px 20px 10px;
+    vertical-align: top;
+    box-shadow: 2px 2px 5px #8E8E8E;
+}
+
+.service:nth-child(1) a {
+    border: 2px solid #EA501A;
+    color: #EA501A;
+}
+
+.service:nth-child(2) a {
+    border: 2px solid #8FD040;
+    color: #8FD040;
+}
+
+.service:nth-child(3) a {
+    border: 2px solid #0692D4;
+    color: #0692D4;
+}
+
+.service:nth-child(1) {
+    border-top: 4px solid #EA501A;
+}
+
+.service:nth-child(2) {
+    border-top: 4px solid #8FD040;
+}
+
+.service:nth-child(3) {
+    border-top: 4px solid #0692D4;
+}
+/*
+ * media 
+ */
+.media {
+    display: flex;
+}
+
+.media h4 {
+    color: #0692D4;
+}
+
+.media .graphic {
+   width: 80px;
+}
+
+.media .graphic figure {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+}
+
+.media:nth-child(1) figure {
+    background: url('../images/dog1.png') center no-repeat;
+    background-size: cover;
+}
+
+.media:nth-child(2) figure {
+    background: url('../images/dog2.png') center no-repeat;
+    background-size: cover;
+}
+
+.media:nth-child(3) figure {
+    background: url('../images/dog3.png') center no-repeat;
+    background-size: cover;
+}
+
+.media .content {
+    flex: 1;
+    background-color: #E8F3F9;
+    padding-left: 10px;
+}
+
+/*
+ * tiles
+ */
+
+main .tiles {
+    width: 180px;
+}
+
+main .tile h4 {
+    background-color: #8ECF41;
+    padding: 5px;
+    color: #3C6A21;
+}
+
+main .tile figure {
+    width: 170px;
+    height: 170px;
+    margin: 0;
+}
+
+main .tile p {
+    background-color: #E3EFD6;
+    margin: 0;
+    padding: 5px;
+    color: #5B6E0B;
+}
+
+main .tile {
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+main .tiles:nth-child(1) figure {
+    background: url('../images/dog1.png') center no-repeat;
+    background-size: cover;
+}
+
+main .tiles:nth-child(2) figure {
+    background: url('../images/dog2.png') center no-repeat;
+    background-size: cover;
+}
+
+main .tiles:nth-child(3) figure {
+    background: url('../images/dog3.png') center no-repeat;
+    background-size: cover;
+}
+
+main .tiles:nth-child(4) figure {
+    background: url('../images/dog3.png') center no-repeat;
+    background-size: cover;
+}
+
+main .tiles:nth-child(5) figure {
+    background: url('../images/dog2.png') center no-repeat;
+    background-size: cover;
+}
+
+main .tiles:nth-child(6) figure {
+    background: url('../images/dog1.png') center no-repeat;
+    background-size: cover;
+}
